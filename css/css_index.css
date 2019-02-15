@@ -110,7 +110,7 @@ section.banner{
 
 /*CARDS*/
 .cards{
-    margin-top: 150px;
+    margin-top: 50px;
     background-color: #fff;
     display: flex;
     flex-wrap: wrap;
