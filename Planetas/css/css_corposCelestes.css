@@ -97,7 +97,7 @@ section.banner{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     padding: 20px;
     color:  #3e4444;
     background:#fff;
