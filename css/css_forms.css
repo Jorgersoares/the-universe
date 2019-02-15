@@ -1,0 +1,90 @@
+@import url(layout.css);
+
+
+/*Tipografia*/
+p{
+    margin: 0;
+    margin-bottom: 50px;
+}
+/* MAIN */
+.form-area{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 80px 20px 20px;
+}
+
+.form-container, .form-container .option {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    padding: 20px 0;
+}
+
+.form-container .option {
+    margin-bottom: 30px;
+}
+
+.form-container .option label{
+    background-color: white;
+    padding: 5px;
+    cursor: text;
+    width: max-content;
+    align-self: center;
+    font-size: 18px;
+    transform: translateY(-65px);
+    transition: transform 0.2s;
+}
+
+.form-container .option input{
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid rgb(200,200,200);
+    border-radius: 5px;
+    width: 100%;
+    transition: border 0.2s;
+    will-change: border;
+}
+
+.form-container .option input:focus {
+    outline: none;
+    border: 2px solid purple;
+}
+
+.form-container .option input:placeholder-shown + label {
+    transform: translateY(-41px);
+}
+
+.form-container .option input:focus + label {
+    transform: translateY(-65px);
+}
+
+.form-container textarea{
+    width: 80%;
+    border: 1px solid black;
+    padding: 10px;
+    align-self: center;
+}
+
+@media (min-width: 420px){
+    .form-container textarea {
+        width: 400px;
+    }
+}
+.form-container .btn-form{
+    width: 150px;
+    height: 50px;
+    background-color: purple;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+    align-self: center;
+}
+
+.form-container .btn-form:focus {
+    outline: none;
+}

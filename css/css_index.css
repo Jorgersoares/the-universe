@@ -1,0 +1,301 @@
+@import url(layout.css);
+
+
+@keyframes radius {
+    from {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rodar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes change {
+    from {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes showup {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showup-main {
+    from {
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes opacitys {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: 1s ease-in-out opacitys;
+}
+
+/* MAIN CONTENT */
+
+/*BANNER*/
+section.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner{
+    background: center/cover url(../img/banner.jpg);
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.banner_description{
+    font-size: 2.5rem;
+    color: #fff;
+
+}
+.banner_description p{
+    opacity: 0;
+    margin: 0;
+    animation: 1s ease-out 0.7s forwards showup;
+}
+/*SOLAR SYSTEM INFO*/
+
+.solar_system_description{
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color:  #3e4444;
+    background:#fff;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: 1s ease-out 1s forwards showup-main;
+}
+
+.solar_system_description .container {
+    height: 100%;
+}
+
+/*CARDS*/
+.cards{
+    margin-top: 150px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.cards_grid .raio {
+    display: none;
+}
+
+@media (min-width: 500px){
+    .cards{
+        margin-top: 80px;
+    }
+}
+
+.cards_grid{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-gap: 30px;
+}
+
+.card {
+    color: black;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: max-content;
+    height: 270px;
+}
+
+.card .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 3px 3px 19px 0px rgba(136,169,235,1);
+    padding: 10px;
+}
+
+.card .front {
+    display: flex;
+    position: absolute;
+    align-self: center;
+    transform: translateY(-15px)
+}
+
+button a {
+    text-decoration: none;
+    color: #3e4444;
+}
+
+.card-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    width: 250px;
+    height: 40px;
+}
+
+.cards_grid .card img {
+    width: 150px;
+    height: 150px;
+}
+
+@media (min-width: 600px){
+    .cards_grid{
+        grid-template-columns: 300px 300px;
+    }
+}
+@media (min-width: 960px){
+    .cards, .contact_container {
+        margin: 0;
+    }
+
+    .cards{
+        width: 960px;
+        height: 900px;
+        margin: 0 auto;
+    }
+
+    .card {
+        color: #2a2e2e;
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        animation: rodar 50s linear infinite;
+    }
+
+    .card .back {
+        box-shadow: none;
+    }
+
+    .card .front {
+        animation: 2s change ease-in-out;
+    }
+
+    .card .back p, .card-btn {
+        display: none;
+    }
+
+    .cards_grid .card img {
+        width: 100px;
+    }
+
+    .cards_grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cards_grid .raio {
+        display: block;
+        width: 600px;
+        height: 600px;
+        border: 1px solid rgba(97, 97, 97, 0.3);
+        border-radius: 50%;
+        animation: 2.2s radius ease-in-out;
+    }
+    /* POSICIONAMENTO DOS PLANETAS */
+
+    .cards_grid .card:nth-child(2) .front {
+        transform: translate(-210px,-210px);
+    }
+
+    .cards_grid .card:nth-child(3) .front{
+        transform: translateY(-300px);
+    }
+
+    .cards_grid .card:nth-child(4) .front{
+        transform: translate(210px,-210px);
+    }
+
+    .cards_grid .card:nth-child(5) .front{
+        transform: translateX(300px);
+    }
+
+    .cards_grid .card:nth-child(6) {
+        transform: translateY(0);
+    }
+
+    .cards_grid .card:nth-child(7) .front{
+        transform: translate(-210px,210px);
+    }
+
+    .cards_grid .card:nth-child(8) .front{
+        transform: translateY(300px);
+    }
+
+    .cards_grid .card:nth-child(9) .front{
+        transform: translate(210px,210px);
+    }
+
+    .cards_grid .card:nth-child(10) .front{
+        transform: translateX(-300px);
+    }
+}
+/* SOLAR SYSTEM HISTORY */
+
+.solar_system_history{
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color:  #3e4444;
+    background:#fff;
+    font-size: 1.2rem;
+    
+}
+
+.solar_system_history img{
+    width: 100%;
+}
+
+.interactive_map{
+    display: none;
+}
+
+@media (min-width: 960px){
+    .interactive_map{
+        display: block;
+    }
+}
