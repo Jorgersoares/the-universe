@@ -278,7 +278,7 @@ button a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     padding: 20px;
     color:  #3e4444;
     background:#fff;
