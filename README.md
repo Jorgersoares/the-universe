@@ -5,7 +5,7 @@
 - Adilson da Silva Costa Júnior
 
 ### How to access?
-The link of project [The Universe](https://jorgersoares.github.io/The_Universe/index.html)
+The link of project [The Universe](https://jorgersoares.github.io/the-universe/)
 
 ### Inspiration content:
 https://solarsystem.nasa.gov/
